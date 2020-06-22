@@ -1,0 +1,50 @@
+   /*NAVBAR*/
+
+.navbar {
+	position:relative;
+	animation-name: slidein;
+	animation-duration: 3s;
+	animation-fill-mode:both;
+}
+
+.navbar a:hover {
+	color:green;
+	text-decoration:none;
+}
+   /*HOME*/
+   
+#home h1, #home h2 {
+	animation-name:fadein;
+	animation-duration:3s;
+	animation-fill-mode:forwards;
+}
+#home h1 {
+	animation-delay:5s;
+}
+#home h2 {
+	animation-delay:8s;
+}
+    /*ABOUT*/
+	
+.section p:hover {
+	font-size:50;
+}
+
+
+@keyframes slidein {
+	from {
+		transform:translateX(-1000px);
+	}
+	to {
+		transform:translateX(0px);
+	}
+}
+
+@keyframes fadein(
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}	

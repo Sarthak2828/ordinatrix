@@ -1,19 +1,201 @@
-body{
-	background-image:url('download%20(1).jpg')
-	
+body {
+	background-color:black;
 }
+/*MAINBOD*/
+
+.mainbod {
+	display:none;
+}
+
+
+ /* LOADER */
+
+.loader {
+   height: 100%;
+   width: 100%;
+   background-color:black;
+   display:block
+}
+
+/*RECTANGLELOADER*/
+.rectangleloader {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 50px;
+   height: 90px;
+}
+
+.rectangleloader div {
+   background-color: red;
+   height: 100%;
+   width: 6px;
+   display: inline-block;
+   animation: rectangle-loading 1.2s infinite ease-in-out;
+}
+
+.rectangleloader .rectangle2 {
+   animation-delay: 1.1s;
+}
+
+.rectangleloader .rectangle3 {
+   animation-delay: 1.0s;
+}
+
+.rectangleloader .rectangle4 {
+   animation-delay: 0.9s;
+}
+
+.rectangleloader .rectangle5 {
+   animation-delay: 0.8s;
+}
+
 /*NAVBAR*/
 
 .navbar {
 	padding: 10px 20px;
 	background-color: black;
-	position: fixed;
+	position: relative;
 	width: 100%;
 	font-size: 20;
+	animation-name: slidein;
+	animation-duration: 3s;
+	animation-fill-mode:both;
 }	
 
 .navbar a {
 	color: white;
 	padding: 15px;
 	text-decoration: none;
+}
+.navbar a:hover {
+	color:green;
+	text-decoration:none;
+}
+/*HOME*/
+
+#home{
+	background-image:url('download.jpg');
+    background-repeat:no-repeat;
+	background-size:cover;
+	text-align:center;
+	height:100%;
+	padding-top:20%;
+}
+#home h1 {
+	font-family: 'Teko', sans-serif;
+	font-size:150px;
+	color:white;
+	animation-name:fadein;
+	animation-duration:3s;
+	animation-fill-mode:both;
+	animation-delay:2s;
+}
+/*COLOR-OVERLAY*/
+#color-overlay {
+	width:100%;
+	height:100%;
+	background-color:black;
+	opacity:0.7;
+	position:absolute;
+
+}
+/*ABOUTUS*/
+
+.section p {
+	font-size:30;
+	padding: 50;
+	color:white;
+}
+.section h2:hover {
+	font-size:50;
+}
+.section h2 {
+	font-size: 40;
+	text-align: center;
+	color:white;
+}
+/*EVENTS*/
+ul li {
+	font-size:30;
+	padding: 5;
+	color:white;
+}
+.myclass h3 {
+	font-size: 40;
+	text-align: center;
+	color:white;
+}
+.myclass h3:hover {
+	font-size:50;
+}
+/*PYROTECHCLUB*/
+.abcclass h4 {
+	font-size: 40;
+	text-align: center;
+	color:white;
+}
+.abcclass h4:hover {
+	font-size:50;
+}
+.abcclass p {
+	font-size:30;
+	padding: 50;
+	color:white;
+}
+/*CONTACTUS*/
+.con h5 {
+	font-size: 40;
+	text-align: center;
+	color:black;
+}
+.con h5:hover {
+	font-size:50;
+}
+.i {
+	color:black;
+	font-size:100px;
+	padding:40 30;
+}
+.con h6 {
+	color:black;
+	font-size:30;
+	padding: 40 30;
+	
+}
+#contactus {
+	background-image:url('tis.jpg');
+    background-repeat:no-repeat;
+	background-size:cover;
+}
+
+
+@-webkit-keyframes slidein {
+	from {
+		 transform:translateX(-1000px);
+	}
+	to {
+		transform:translateX(0px);
+	}
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}	
+@-webkit-keyframes rectangle-loading {
+
+   0%,
+   40%,
+   100% {
+      transform: scaleY(0.4);
+   }
+
+   20% {
+      transform: scaleY(1.0);
+   }
 }
